@@ -6,7 +6,7 @@ namespace FizzBuzz
     {
         public object GetFizzBuzzResponse(int integer)
         {
-            if (integer % 3 == 0 || integer % 5 == 0)
+            if (integer != 0 && (integer % 3 == 0 || integer % 5 == 0))
             {
                 StringBuilder sb = new StringBuilder();
                 if (integer % 3 == 0)

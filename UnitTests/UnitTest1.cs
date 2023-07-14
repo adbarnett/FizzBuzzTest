@@ -24,8 +24,8 @@ namespace UnitTests
             get
             {
                 return Enumerable
-                    .Range(1, 100)
-                    .Where(i => i % 3 == 0 && i % 5 != 0)
+                    .Range(0, 101)
+                    .Where(i => i != 0 && i % 3 == 0 && i % 5 != 0)
                     .Select(i => new object[] { i })
                     .ToArray();
             }
@@ -44,8 +44,8 @@ namespace UnitTests
             get
             {
                 return Enumerable
-                    .Range(1, 100)
-                    .Where(i => i % 3 != 0 && i % 5 == 0)
+                    .Range(0, 101)
+                    .Where(i => i != 0 && i % 3 != 0 && i % 5 == 0)
                     .Select(i => new object[] { i })
                     .ToArray();
             }
@@ -63,8 +63,8 @@ namespace UnitTests
             get
             {
                 return Enumerable
-                    .Range(1, 100)
-                    .Where(i => i % 3 == 0 && i % 5 == 0)
+                    .Range(0, 101)
+                    .Where(i => i != 0 && i % 3 == 0 && i % 5 == 0)
                     .Select(i => new object[] { i })
                     .ToArray();
             }
@@ -83,8 +83,8 @@ namespace UnitTests
             get
             {
                 return Enumerable
-                    .Range(1, 100)
-                    .Where(i => i % 3 != 0 && i % 5 != 0)
+                    .Range(0, 101)
+                    .Where(i => i == 0 || (i % 3 != 0 && i % 5 != 0))
                     .Select(i => new object[] { i })
                     .ToArray();
             }
