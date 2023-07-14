@@ -33,7 +33,7 @@ namespace UnitTests
 
         [DataTestMethod]
         [DynamicData(nameof(DivisibleBy5TestData))]
-        public void GetFizzBuzzResponse_ReturnFizzWhenDivisibleBy5(int value)
+        public void GetFizzBuzzResponse_ReturnBuzzWhenDivisibleBy5(int value)
         {
             var result = _fizzBuzzService.GetFizzBuzzResponse(value);
             Assert.IsTrue(result.GetType() == typeof(string) && result.ToString().ToLowerInvariant() == "buzz");
